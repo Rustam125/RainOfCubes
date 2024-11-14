@@ -13,7 +13,7 @@ public class CubeSpawner : MonoBehaviour
     {
         _objectPool = new ObjectPool<Cube>(
             createFunc: () => Instantiate(_prefab, transform),
-            actionOnGet: GetCube,
+            actionOnGet: InitCube,
             actionOnRelease: ReleaseCube,
             actionOnDestroy: Destroy);
     }
@@ -23,7 +23,7 @@ public class CubeSpawner : MonoBehaviour
         InvokeRepeating(nameof(Spawn), 0f, _repeatRate);
     }
 
-    private void GetCube(Cube cube)
+    private void InitCube(Cube cube)
     {
         cube.Init(GetRandomPosition());
         cube.Destroyed += _objectPool.Release;
