@@ -13,7 +13,7 @@ namespace Models
         public void Explode(Bomb explosionBomb)
         {
             foreach (var explodableObject in GetExplodableObjects(explosionBomb)
-                         .Select(target => target.GetRigidbody()))
+                         .Select(target => target.Rigidbody))
             {
                 explodableObject.AddExplosionForce(
                     _baseExplosionForce,

@@ -4,6 +4,6 @@ namespace Interfaces
 {
     public interface IExplodable
     {
-        Rigidbody GetRigidbody();
+        Rigidbody Rigidbody { get; }
     }
 }

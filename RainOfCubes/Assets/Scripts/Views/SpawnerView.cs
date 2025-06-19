@@ -1,12 +1,12 @@
 ﻿using System;
-using Controllers;
 using Models;
+using Spawners;
 using TMPro;
 using UnityEngine;
 
 namespace Views
 {
-    public class SpawnerView<T> : MonoBehaviour where T : MonoBehaviour
+    public class SpawnerView<T> : MonoBehaviour where T : SpawnedObject
     {
         [SerializeField] private Spawner<T> _spawner;
         [SerializeField] private TextMeshProUGUI _text;
@@ -23,7 +23,7 @@ namespace Views
 
         private void UpdateData(SpawnerInfo spawnerData)
         {
-            _text.text = $"{typeof(T).Name}{Environment.NewLine}" +
+            _text.text = $"{spawnerData.ObjectName}{Environment.NewLine}" +
                          $"Spawned: {spawnerData.SpawnedObjects}{Environment.NewLine}" +
                          $"Created: {spawnerData.CreatedObjects}{Environment.NewLine}" +
                          $"Active: {spawnerData.ActiveObjects}";

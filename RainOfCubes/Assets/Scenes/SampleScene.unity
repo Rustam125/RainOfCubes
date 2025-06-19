@@ -1109,7 +1109,7 @@ GameObject:
   - component: {fileID: 1374820144}
   - component: {fileID: 1374820147}
   - component: {fileID: 1374820146}
-  - component: {fileID: 1374820145}
+  - component: {fileID: 1374820148}
   m_Layer: 5
   m_Name: BombSpawnerView
   m_TagString: Untagged
@@ -1136,20 +1136,6 @@ RectTransform:
   m_AnchoredPosition: {x: 300, y: -50}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1374820145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374820143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5600698da904a7ead1e892926432567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawner: {fileID: 714244358}
-  _text: {fileID: 1374820146}
 --- !u!114 &1374820146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,6 +1233,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374820143}
   m_CullTransparentMesh: 1
+--- !u!114 &1374820148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374820143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5600698da904a7ead1e892926432567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawner: {fileID: 714244358}
+  _text: {fileID: 1374820146}
 --- !u!1 &1727947874
 GameObject:
   m_ObjectHideFlags: 0
