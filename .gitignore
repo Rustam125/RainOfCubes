@@ -3,10 +3,12 @@
 
 # But not these files...
 !.gitignore
-!**/Assets/Scripts/*
+!**/Assets/Scripts/**/*
 
 # ...even if they are in subdirectories
 !*/
 
 # Ignore scripts meta
 *.meta
+
+.idea/
